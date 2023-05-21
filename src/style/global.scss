@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+li {
+  list-style-type: none;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
