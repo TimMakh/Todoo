@@ -1,4 +1,4 @@
-# Todo project
+# Todoo project
 
 ### Student: - [Makhmutov T.R](https://github.com/TimMakh)
 
