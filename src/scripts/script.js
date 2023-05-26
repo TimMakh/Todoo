@@ -1,15 +1,23 @@
-fetch("https://jsonplaceholder.typicode.com/todos/")
-  .then((data) => data.json())
-  .then((data) => console.log(data));
-
-const renderTodo = (data) => {
-  const listTodo = document.querySelector(".todo__list");
-  data.forEach((todo) => {
+const renderList = (data) => {
+  const list = document.querySelector(".todo__list");
+  data.forEach((item) => {
     const template = document
-      .querySelector(".todo__item")
-      .content.querySelector(".todo__card");
-    const todoItem = template.cloneNode(true);
-    todoItem.querySelector(".todo__task").textContent = data.title;
-    listTodo.appendChild(todoItem);
+      .querySelector(".todo__template")
+      .content.querySelector(".todo__item");
+    const newItem = template.cloneNode(true);
+    newItem.querySelector(".todo__task").textContent = item.title;
+    list.appendChild(newItem);
   });
 };
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((res) => res.json())
+  .then((data) => renderList(data));
+
+const form = document.querySelector(".todo__form");
+
+console.log(form);
+
+form.submit(function (e) {
+  e.preventDefault();
+});
