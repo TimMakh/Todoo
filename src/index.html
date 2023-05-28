@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <script src="./scripts/script.js"></script>
   </head>
   <body class="body">
     <main class="main">
@@ -15,7 +14,7 @@
           <input
             class="todo__input"
             type="text"
-            placeholder="New Task"
+            placeholder="Add your task and click button ----------- >"
             name="todo__text"
             required />
           <button type="submit" class="todo__btn todo__btn--add">+</button>
@@ -26,7 +25,7 @@
     <div class="modal">
       <div class="modal__content">
         <h3 class="modal__priority">Priority</h3>
-        <button type="button" class="modal__btn modal__btn--close"></button>
+        <button type="button" class="modal__btn modal__btn--close">X</button>
         <ul class="modal__list">
           <li class="modal__item modal__item--high">
             <button type="button" class="modal__btn modal__btn--high"></button>
@@ -42,7 +41,7 @@
         </ul>
         <hr class="modal__hr" />
         <button type="button" class="modal__btn modal__btn--remove">
-          Delete Task
+          Remove Task
         </button>
       </div>
     </div>
