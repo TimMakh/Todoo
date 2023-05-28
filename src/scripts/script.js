@@ -37,6 +37,13 @@ const sendTodo = () => {
   });
 };
 
+const modalElem = document.querySelector(".modal");
+const btnCloseModal = document.querySelector(".modal__btn--close");
+
+btnCloseModal.addEventListener("click", function (closeModal) {
+  modalElem.style.visibility = "hidden";
+});
+
 const renderList = (data) => {
   const list = document.querySelector(".todo__list");
   data.forEach((item) => {
@@ -45,6 +52,13 @@ const renderList = (data) => {
       .content.querySelector(".todo__item");
     const newItem = template.cloneNode(true);
     newItem.querySelector(".todo__task").textContent = item.title;
+
+    newItem
+      .querySelector(".todo__btn--functional")
+      .addEventListener("click", function (openModal) {
+        modalElem.style.visibility = "visible";
+      });
+    newItem.querySelector(".todo__checkbox");
     list.appendChild(newItem);
   });
 };
