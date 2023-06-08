@@ -22,36 +22,29 @@
         <ul class="todo__list"></ul>
       </section>
     </main>
-    <div class="modal">
-      <div class="modal__content">
-        <h3 class="modal__priority">Priority</h3>
-        <button type="button" class="modal__btn modal__btn--close">X</button>
-        <ul class="modal__list">
-          <li class="modal__item modal__item--high">
-            <button type="button" class="modal__btn modal__btn--high"></button>
-          </li>
-          <li class="modal__item modal__item--normal">
-            <button
-              type="button"
-              class="modal__btn modal__btn--normal"></button>
-          </li>
-          <li class="modal__item modal__item--low">
-            <button type="button" class="modal__btn modal__btn--low"></button>
-          </li>
-        </ul>
-        <hr class="modal__hr" />
-        <button type="button" class="modal__btn modal__btn--remove">
-          Remove Task
-        </button>
-      </div>
-    </div>
     <script src="index.js"></script>
   </body>
   <template class="todo__template">
     <li class="todo__item">
-      <input class="todo__checkbox" type="checkbox" />
+      <label class="todo__check-option">
+        <input class="todo__checkbox" type="checkbox" />
+        <span class="todo__checkbox-span"></span>
+      </label>
       <p class="todo__task"></p>
-      <button class="todo__btn todo__btn--functional"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--remove">
+        remove
+      </button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--high"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--normal"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--low"></button>
     </li>
   </template>
 </html>
