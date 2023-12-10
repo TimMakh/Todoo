@@ -7,10 +7,11 @@
 }
 .todo {
   background-color: white;
-  width: 800px;
+  min-width: 800px;
   border-radius: 8px;
   padding-left: 25px;
 }
+
 .todo__title {
   margin: 0;
   margin-bottom: 15px;
@@ -25,8 +26,9 @@
   line-height: 23px;
   letter-spacing: 0px;
   text-align: left;
+  text-decoration: none;
 }
-.todo__position {
+.todo__btn {
   margin-right: 20px;
   width: 30px;
   height: 30px;
@@ -34,17 +36,22 @@
   background-color: white;
   background-repeat: no-repeat;
 }
-.todo__up {
-  padding: 0;
-  background-image: url(/src/images/up.png);
+.todo__btn-priority {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 64px;
+  height: 64px;
+  border: none;
+  background-color: white;
 }
-.todo__down {
-  padding: 0;
-  background-image: url(/src/images/down.png);
+.todo__btn-priority--high {
+  background-image: url(/src/images/red-flag-icon.svg);
 }
-.todo__fuctional {
-  padding: 0;
-  background-image: url(/src/images/burger.png);
+.todo__btn-priority--normal {
+  background-image: url(/src/images/flag-green-icon.svg);
+}
+.todo__btn-priority--low {
+  background-image: url(/src/images/flag-orange-icon.svg);
 }
 .todo__new {
   margin-bottom: 15px;
@@ -62,4 +69,17 @@
   height: 25px;
   margin-right: 10px;
   border-radius: 8px;
+  background-color: white;
+}
+
+.todo__input {
+  width: 500px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.todo__btn--add {
+  background-color: #95b4b4;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 900;
 }

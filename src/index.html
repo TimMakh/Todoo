@@ -5,45 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <script src="./scripts/script.js"></script>
   </head>
   <body class="body">
-    <div class="todo">
-      <h1 class="todo__title">My checklist</h1>
-      <div class="todo__new">
-        <input class="todo__new-task" type="text" placeholder="New Task" />
-        <button class="todo__add">+</button>
-      </div>
-      <ul class="todo__list"></ul>
-    </div>
-    <div class="modal">
-      <div class="modal__content">
-        <span class="modal__priority">Priority</span>
-        <button class="modal__close"></button>
-        <ul class="modal__priority-list">
-          <li class="modal__priority-high">
-            <button class="modal__priority-button"></button>
-          </li>
-          <li class="modal__priority-normal">
-            <button class="modal__priority-button"></button>
-          </li>
-          <li class="modal__priority-low">
-            <button class="modal__priority-button"></button>
-          </li>
-        </ul>
-        <hr class="modal__decoration" />
-        <button class="modal__delete-task">Delete Task</button>
-      </div>
-    </div>
+    <main class="main">
+      <section class="todo">
+        <h1 class="todo__title">My checklist</h1>
+        <form class="todo__form">
+          <input
+            class="todo__input"
+            type="text"
+            placeholder="Add your task and click button ----------- >"
+            name="todo__text"
+            required />
+          <button type="submit" class="todo__btn todo__btn--add">+</button>
+        </form>
+        <ul class="todo__list"></ul>
+      </section>
+    </main>
     <script src="index.js"></script>
   </body>
-  <template class="todo__card">
+  <template class="todo__template">
     <li class="todo__item">
-      <input class="todo__checkbox" type="checkbox" />
+      <label class="todo__check-option">
+        <input class="todo__checkbox" type="checkbox" />
+        <span class="todo__checkbox-span"></span>
+      </label>
       <p class="todo__task"></p>
-      <button class="todo__up"></button>
-      <button class="todo__down"></button>
-      <button class="todo__fuctional"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--remove">
+        remove
+      </button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--high"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--normal"></button>
+      <button
+        type="button"
+        class="todo__btn-priority todo__btn-priority--low"></button>
     </li>
   </template>
 </html>
